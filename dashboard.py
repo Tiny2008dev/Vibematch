@@ -1,7 +1,9 @@
+#use of moduls to import build function from different pages
 import customtkinter as ctk
 from playlists import build_playlists
 from voice_session import build_voice
 from home import build_home
+from insights import buildinsight
 
 def open_dashboard():
 
@@ -45,7 +47,7 @@ def open_dashboard():
 	build_voice(voice_page)
 	#build_recc(recc_page)
 	build_playlists(playlist_page)
-	#buildinsight(insights_page)
+	buildinsight(insights_page)
 
 
     #sidebar buttons
