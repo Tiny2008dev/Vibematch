@@ -19,7 +19,7 @@ def open_dashboard():
 	app.grid_rowconfigure(0, weight=1)
 	app.grid_columnconfigure(1, weight=1)
 
-	sidebar = ctk.CTkFrame(app, width=200 , fg_color="#111111")
+	sidebar = ctk.CTkFrame(app, width= 230 , fg_color="#111111")
 	sidebar.grid( row= 0 , column = 0 , sticky="ns")
 	sidebar.grid_propagate(False)
 
@@ -53,6 +53,9 @@ def open_dashboard():
     #sidebar buttons
 	title = ctk.CTkLabel(sidebar , text="VIBEMATCH" , font=("Arial" , 20 , "bold"), text_color="#1DB954")
 	title.grid(row= 0 , column = 0 , pady = 10 , padx = 10)
+
+	account_info = ctk.CTkFrame(sidebar)
+	account_info.grid(row = 2 , column = 0 , pady = 10 , padx = 10)
 	HomeBtn = ctk.CTkButton(sidebar , text="Home" , font =("Arial",20 , "bold"), text_color="white" , command=lambda:show(home_page))
 	HomeBtn.grid(row = 4 , column = 0 , pady = 10 , padx = 10)
 	voicesession = ctk.CTkButton(sidebar , text="Voice\nSession" , font =("Arial",20 , "bold"), text_color="white" , command=lambda:show(voice_page))
